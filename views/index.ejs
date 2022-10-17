@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script defer src="/js/script.js" type="text/javascript"></script>
+    <title>Index page</title>
+  </head>
+  <body>
+    <!-- render the contents of header.ejs  -->
+    <div class="container">
+        <header><%- include("header.ejs") %></header>
+    <br />
+    <h3>Todos :</h3>
+    <table>
+      <tr>
+        <th>Sr. No</th>
+        <th>Title</th>
+        <th>Due Date</th>
+        <th>Completed ?</th>
+      </tr>
+
+      <% todos.map((todoItem, index) => { %>
+      <tr>
+        <td><%= index %></td>
+        <td><%= todoItem.title %></td>
+        <td><%= todoItem.dueDate %></td>
+        <td><%= todoItem.completed %></td>
+      </tr>
+      <% }) %>
+    </table>
+    <br />
+    <!-- render the contents of footer.ejs  -->
+    <footer><%- include("footer.ejs") %></footer>
+    </div>
+  </body>
+</html>

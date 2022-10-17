@@ -1,0 +1,18 @@
+body{
+    background-color: #2d9ee0;
+}
+h1{
+    color: #ff00c8;
+}
+h3{
+    color: rgb(255, 102, 0);
+}
+td{
+    color: rgb(0, 0, 0);
+}
+th{
+    color: rgb(0, 0, 0);
+}
+.container{
+    background-color: lightpink;
+}
